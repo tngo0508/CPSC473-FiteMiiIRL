@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cpsc473-fite-mii-irl
 
 This README outlines the details of collaborating on this Ember application.
@@ -54,3 +55,6 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+=======
+# CPSC473-FiteMiiIRL
+>>>>>>> 55bf9fcc03722db5fdb8393cac9670b28329fb62
