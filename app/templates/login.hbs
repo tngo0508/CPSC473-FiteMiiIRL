@@ -1,0 +1,22 @@
+<div class="jumbotron col-xs-7 col-xs-offset-3">
+  <h1>login page</h1>
+
+  <br/><br/>
+  <div class="form-horizontal form-group form-group-lg row">
+    <div class="col-xs-10 col-xs-offset-1">
+    <label for="inputEmail" class="col-form-label">e-mail</label>
+      {{input type="email" value=emailAddress class="form-control" placeholder="example@email.com" autofocus="autofocus"}}
+    </div>
+  </div>
+  <div class="form-horizontal form-group form-group-lg row">
+    <div class="col-xs-10 col-xs-offset-1">
+    <label for="inputPassword" class="col-form-label">Password</label>
+      {{input type="password" value=password class="form-control" placeholder="password"}}
+    </div>
+  </div>
+  <div class="form-horizontal form-group form-group-lg row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <button class="btn btn-primary btn-lg btn-block" {{action 'authenticate'}} disabled={{isDisabled}}>Sign in</button>
+    </div>
+  </div>
+</div>
