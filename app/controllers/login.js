@@ -19,17 +19,18 @@ export default Controller.extend({
   isLongEnough: gte("password.length", 6),
   isBothTrue: and('isValid', 'isLongEnough'),
   isDisabled: not('isBothTrue'),
-  actions: {
-    signIn() {
-      this.get('session').open('firebase', {
-        provider: 'password',
-        email: this.get('emailAddress'),
-        password: this.get('password')
-      }).then(data => {
-        console.log(data.currentUser);
-      });
-    },
-    signOut() {
-      this.get('session').close();
-    }
-  }});
+  // actions: {
+  //   signIn() {
+  //     this.get('session').open('firebase', {
+  //       provider: 'password',
+  //       email: this.get('emailAddress'),
+  //       password: this.get('password')
+  //     }).then(data => {
+  //       console.log(data.currentUser);
+  //     });
+  //   },
+  //   signOut() {
+  //     this.get('session').close();
+  //   }
+  // }
+});
