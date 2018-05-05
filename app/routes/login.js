@@ -12,6 +12,8 @@ export default Route.extend({
         provider: 'password',
         email: this.controller.get('emailAddress'),
         password: this.controller.get('password')
+      }).catch((error) => {
+        this.controller.set('responseError', error.message);
       })
       // }). then(data => {
       //   console.log(data.currentUser);

@@ -1,7 +1,6 @@
 {{#if session.isAuthenticated}}
   Logged in as {{session.currentUser.email}}
-  <button {{action "signOut"}}>Sign out</button>
-  {{outlet}}
+  <button {{action "signOut"}}>Sign out</button> {{outlet}}
 {{else}}
 
   <div class="jumbotron col-xs-7 col-xs-offset-3">
@@ -29,5 +28,9 @@
         {{#link-to 'register' class="btn btn-primary btn-lg btn-block" }}Create your new account{{/link-to}}
       </div>
     </div>
+
+    {{#if responseError}}
+      <div class="alert alert-danger">{{responseError}}</div>
+    {{/if}}
   </div>
 {{/if}}
