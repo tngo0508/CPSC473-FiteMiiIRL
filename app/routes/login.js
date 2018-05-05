@@ -2,6 +2,11 @@ import Route from '@ember/routing/route';
 import {inject} from '@ember/service'
 
 export default Route.extend({
+  setupController(controller) {
+    controller.set('responseError', '');
+    controller.set('emailAddress', '');
+    controller.set('password', '');
+  },
   session: inject(),
   beforeModel: function() {
     return this.get('session').fetch().catch(function() {});
