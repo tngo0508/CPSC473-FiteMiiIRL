@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('tournaments');
   this.route('login');
   this.route('register');
+  this.route('about');
+  this.route('contact');
 });
 
 export default Router;
