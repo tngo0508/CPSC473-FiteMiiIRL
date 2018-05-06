@@ -1,0 +1,19 @@
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{tournaments.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+  <h3>{{tournaments.title}}</h3>
+  <div class="detail owner">
+    <span>Event Organizer:</span> {{tournaments.organizer}}
+  </div>
+  <div class="detail type">
+    <span>Type:</span> {{tournaments.category}}
+  </div>
+  <div class="detail location">
+    <span>Location:</span> {{tournaments.city}}
+  </div>
+  <div class="detail bedrooms">
+    <span>Number of attendee:</span> {{tournaments.attendee}}
+  </div>
+</article>
