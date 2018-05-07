@@ -62,7 +62,7 @@ p {
 .container {
     max-width: 1024px;
     min-height: 100vh;
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
     margin: 0 auto;
 }
 /**
