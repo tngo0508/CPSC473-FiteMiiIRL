@@ -20,5 +20,16 @@ export default Route.extend({
       orderBy: 'organizer',
       equalTo: email
     });
+  },
+
+  actions: {
+
+    deleteTournament(tournament) {
+      let confirmation = confirm('Are you sure?');
+
+      if (confirmation) {
+        tournament.destroyRecord();
+      }
+    }
   }
 });
