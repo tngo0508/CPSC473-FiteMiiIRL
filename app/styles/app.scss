@@ -4,6 +4,21 @@ body{
   padding-top: 20px;
 }
 
+html {
+  overflow-y: scroll;
+}
+
+.tournament-item {
+  min-height: 150px;
+}
+
+.tournament img {
+    height: 100px;
+    float: left;
+    margin-right: 45px;
+    border-radius: 5px;
+}
+
 .hr-text {
   line-height: 1em;
   position: relative;

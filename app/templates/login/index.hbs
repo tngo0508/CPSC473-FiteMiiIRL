@@ -1,0 +1,28 @@
+<h2>List</h2>
+<div class="row">
+  {{#each model as |tournament|}}
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{tournament.title}}</h3>
+        </div>
+        <div class="panel-body">
+          <p>id: {{tournament.id}}</p>
+          <p>organizer: {{tournament.organizer}}</p>
+          <p>city: {{tournament.city}}</p>
+          <p>category: {{tournament.category}}</p>
+          <p>attendee: {{tournament.attendee}}</p>
+          <p>description: {{tournament.description}}</p>
+          <p>image: {{tournament.image}}</p>
+          <div class="tournament">
+            <img src="{{tournament.image}}" alt="">
+          </div>
+        </div>
+        <div class="panel-footer text-right">
+          {{#link-to 'login.edit' login.id class='btn btn-success btn-xs' }}Edit{{/link-to}}
+          <button class="btn btn-danger btn-xs" {{action 'deleteTournament' tournament}}>Delete</button>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

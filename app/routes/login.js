@@ -21,16 +21,20 @@ export default Route.extend({
         password: this.controller.get('password')
       }).catch((error) => {
         this.controller.set('responseError', error.message);
-      })
+      }).then(() => {
+        this.refresh()
+      });
       // }). then(data => {
       //   console.log(data.currentUser);
       // });
     },
     signOut() {
-      this.get('session').close();
       this.controller.set('responseError', '');
       this.controller.set('emailAddress', '');
       this.controller.set('password', '');
+      this.get('session').close().then(() => {
+        this.refresh()
+      });
     }
   }
 });

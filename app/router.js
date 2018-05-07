@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('tournaments');
   this.route('login', function() {
     this.route('new');
+    this.route('edit', { path: '/:login_id/edit' });
   });
   this.route('register');
   this.route('about');
