@@ -1,37 +1,38 @@
-<nav class = "navbar navbar-inverse">
-  <div class = "container-fluid">
-    <div class = "navbar-header">
-      <button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapsed" data-target = "#main-navbar">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#main-navbar">
         <span class = "sr-only">Toggle Navigation</span>
         <span class = "icon-bar"></span>
         <span class = "icon-bar"></span>
         <span class = "icon-bar"></span>
       </button>
-      {{#link-to 'index' class="navbar-brand"}}<a href="">FiteMiiIRL</a>{{/link-to}}
+      {{#link-to 'index' class="navbar-brand" }}<a href="">FiteMiiIRL</a>{{/link-to}}
     </div>
 
-    <div class = "collapse navbar-collapse" id="main-navbar">
-      <ul class = "nav navbar-nav">
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav">
         <!-- {{#link-to 'index' tagName="li"}} <a href = "">Home</a>{{/link-to}} -->
-        {{#link-to 'tournaments' tagName = "li"}} <a href= "">Tournaments</a>{{/link-to}}
-        {{#link-to 'login' tagName="li"}}<a href="" class = "login-button">Login</a>{{/link-to}}
-        {{#link-to 'about' tagName="li"}}<a href="" class = "login-button">About</a>{{/link-to}}
-        {{#link-to 'contact' tagName="li"}}<a href="" class = "login-button">Contact</a>{{/link-to}}
+        {{#link-to 'tournaments' tagName="li" }} <a href="">Tournaments</a>{{/link-to}}
+        {{#link-to 'login' tagName="li" }}<a href="" class="login-button">Login</a>{{/link-to}}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#link-to 'about' tagName="li" }}<a href="" class="login-button">About</a>{{/link-to}}
+        {{#link-to 'contact' tagName="li" }}<a href="" class="login-button">Contact</a>{{/link-to}}
+        <li class="dropdown">
+          {{#if session.isAuthenticated}}
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            {{session.currentUser.email}}<span class="caret"></span>
+          </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a {{action "signOut"}}>signOut</a>
+              </li>
+            </ul>
+          {{/if}}
+        </li>
       </ul>
 
-
     </div>
-
-    <!-- <ul class = "nav navbar-nav navbar-right"> -->
-    <!-- <li class = "dropdown"> -->
-      <!-- <a class = "dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        Admin<span class = "caret"></span>
-      </a> -->
-      <!-- <ul class= "nav navbar-nav"> -->
-
-      <!-- </ul> -->
-    <!-- </li> -->
-  <!-- </ul> -->
-
   </div>
 </nav>
