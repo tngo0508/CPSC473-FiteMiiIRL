@@ -1,5 +1,7 @@
 import Route from '@ember/routing/route';
-import {inject} from '@ember/service'
+import {
+  inject
+} from '@ember/service'
 
 export default Route.extend({
   setupController(controller) {
@@ -26,6 +28,9 @@ export default Route.extend({
     },
     signOut() {
       this.get('session').close();
+      this.controller.set('responseError', '');
+      this.controller.set('emailAddress', '');
+      this.controller.set('password', '');
     }
   }
 });

@@ -8,7 +8,9 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('tournaments');
-  this.route('login');
+  this.route('login', function() {
+    this.route('new');
+  });
   this.route('register');
   this.route('about');
   this.route('contact');

@@ -6,7 +6,6 @@ import {
 
 export default Route.extend({
   firebaseApp: inject(),
-  session: inject(),
 
   setupController(controller) {
     controller.set('responseMessage', '');
@@ -30,14 +29,13 @@ export default Route.extend({
         // user.save();
         this.controller.set('responseMessage', `You have succesfully create a new account with the following uid:` + userResponse.uid);
         this.controller.set('responseError', '');
+        this.transitionTo('login');
       }, (error) => {
         if (error) {
           this.controller.set('responseError', error);
           this.controller.set('responseMessage', '');
         }
       });
-
-      this.get('session').close();
     }
   }
 });

@@ -1,6 +1,14 @@
 {{#if session.isAuthenticated}}
-  Logged in as {{session.currentUser.email}}
-  <button {{action "signOut"}}>Sign out</button> {{outlet}}
+  <h1>My Tournaments</h1>
+
+  <div class="well">
+    <ul class="nav nav-pills">
+      {{#link-to 'login.index' tagName="li" }}<a href="">List all</a>{{/link-to}}
+      {{#link-to 'login.new' tagName="li" }}<a href="">Add new</a>{{/link-to}}
+    </ul>
+  </div>
+
+  {{outlet}}
 {{else}}
 
   <div class="jumbotron col-xs-7 col-xs-offset-3">
