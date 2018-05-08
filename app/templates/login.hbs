@@ -28,7 +28,13 @@
     </div>
     <div class="form-horizontal form-group form-group-lg row">
       <div class="col-xs-10 col-xs-offset-1">
-        <button class="btn btn-primary btn-lg btn-block" {{action 'signIn'}} disabled= {{isDisabled}}>Sign in</button>
+        <button class="btn btn-primary btn-lg btn-block" {{action 'signIn'}} disabled= {{isDisabled}}>
+          {{#if loginInProgress}}
+           <span class="glyphicon glyphicon-refresh spinning"></span> Signing In...
+         {{else}}
+           Sign In
+         {{/if}}
+          </button>
       </div>
     </div>
     <hr class="hr-text" data-content="New to FiteMiiIRL?">
