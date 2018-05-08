@@ -6,6 +6,17 @@ export default Route.extend({
     return this.store.findRecord('tournament', params.tournament_id);
   },
 
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Edit tournament');
+    controller.set('buttonLabel', 'Save changes');
+  },
+
+  renderTemplate() {
+    this.render('login/form');
+  },
+
   actions: {
 
     saveTournament(tournament) {
