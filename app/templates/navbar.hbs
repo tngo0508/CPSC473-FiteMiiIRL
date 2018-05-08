@@ -14,9 +14,7 @@
       <ul class="nav navbar-nav">
         {{#link-to 'index' tagName="li"}} <a href = "">Home</a>{{/link-to}}
         {{#link-to 'tournaments' tagName="li" }} <a href="">Tournaments</a>{{/link-to}}
-        {{#unless session.isAuthenticated}}
-          {{#link-to 'login' tagName="li" }}<a href="" class="login-button">Login</a>{{/link-to}}
-        {{/unless}}
+        {{#link-to 'login' tagName="li" }}<a href="" class="login-button">My Tournament</a>{{/link-to}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#link-to 'about' tagName="li" }}<a href="" class="login-button">About</a>{{/link-to}}
