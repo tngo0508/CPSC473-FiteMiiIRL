@@ -16,7 +16,10 @@
   <div class="detail bedrooms">
     <span>Number of attendee:</span> {{tournaments.attendee}}
   </div>
+
   <div class="detail bedrooms">
       {{#link-to 'tournamentpage.tournamentpage' tournaments.id}}Tourney Page{{/link-to}}
   </div>
+  {{location-map location=tournaments.city}}
+
 </article>
