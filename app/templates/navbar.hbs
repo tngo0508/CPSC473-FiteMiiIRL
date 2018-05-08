@@ -12,13 +12,13 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
-        {{#link-to 'index' tagName="li"}} <a href = "">Home</a>{{/link-to}}
-        {{#link-to 'tournaments' tagName="li" }} <a href="">Tournaments</a>{{/link-to}}
-        {{#link-to 'login' tagName="li" }}<a href="" class="login-button">My Tournament</a>{{/link-to}}
+        {{#nav-link-to 'index'}}Home{{/nav-link-to}}
+        {{#nav-link-to 'tournaments'}}Tournaments{{/nav-link-to}}
+        {{#nav-link-to 'login'}}My Tournament{{/nav-link-to}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        {{#link-to 'about' tagName="li" }}<a href="" class="login-button">About</a>{{/link-to}}
-        {{#link-to 'contact' tagName="li" }}<a href="" class="login-button">Contact</a>{{/link-to}}
+        {{#nav-link-to 'about'}}About{{/nav-link-to}}
+        {{#nav-link-to 'contact'}}Contact{{/nav-link-to}}
         <li class="dropdown">
           {{#if session.isAuthenticated}}
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
