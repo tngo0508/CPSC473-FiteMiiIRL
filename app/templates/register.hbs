@@ -19,7 +19,13 @@
   </div>
   <div class="form-horizontal form-group form-group-lg row">
     <div class="col-xs-10 col-xs-offset-1">
-      <button class="btn btn-primary btn-lg btn-block" {{action 'signUp'}} disabled= {{isDisabled}}>Sign up</button>
+      <button class="btn btn-primary btn-lg btn-block" {{action 'signUp'}} disabled= {{isDisabled}}>
+        {{#if registerInProgress}}
+         <span class="glyphicon glyphicon-refresh spinning"></span> Signing up new account...
+       {{else}}
+         Sign Up
+       {{/if}}
+      </button>
     </div>
   </div>
   {{#if responseMessage}}
