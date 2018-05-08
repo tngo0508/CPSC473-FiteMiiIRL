@@ -11,6 +11,17 @@ export default Route.extend({
     });
   },
 
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Create a new tournament');
+    controller.set('buttonLabel', 'Create');
+  },
+
+  renderTemplate() {
+    this.render('login/form');
+  },
+
   actions: {
 
     saveTournament(newTournament) {
@@ -20,7 +31,12 @@ export default Route.extend({
     willTransition() {
       // rollbackAttributes() removes the record from the store
       // if the model 'isNew'
-      this.controller.get('model').rollbackAttributes();
+      // this.controller.get('model').rollbackAttributes();
+      let model = this.controller.get('model');
+
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
     }
   }
 });
