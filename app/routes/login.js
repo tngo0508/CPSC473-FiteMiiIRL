@@ -15,18 +15,22 @@ export default Route.extend({
   },
   actions: {
     signIn() {
-      this.get('session').open('firebase', {
-        provider: 'password',
-        email: this.controller.get('emailAddress'),
-        password: this.controller.get('password')
-      }).catch((error) => {
-        this.controller.set('responseError', error.message);
-      }).then(() => {
-        this.controller.set('responseError', '');
-        this.controller.set('emailAddress', '');
-        this.controller.set('password', '');
-        this.refresh()
-      });
+      this.controller.set('loginInProgress', true),
+        this.controller.set('isDisabled', true),
+        this.get('session').open('firebase', {
+          provider: 'password',
+          email: this.controller.get('emailAddress'),
+          password: this.controller.get('password')
+        }).catch((error) => {
+          this.controller.set('responseError', error.message);
+        }).then(() => {
+          this.controller.set('responseError', '');
+          this.controller.set('emailAddress', '');
+          this.controller.set('password', '');
+          this.controller.set('loginInProgress', false);
+          this.controller.set('isDisabled', false);
+          this.refresh()
+        });
       // }). then(data => {
       //   console.log(data.currentUser);
       // });

@@ -16,6 +16,8 @@ export default Controller.extend({
   password: '',
   responseError: '',
 
+  loginInProgress: false,
+
   isValid: match('emailAddress', /^.+@.+\..+$/),
   isLongEnough: gte("password.length", 6),
   isBothTrue: and('isValid', 'isLongEnough'),
