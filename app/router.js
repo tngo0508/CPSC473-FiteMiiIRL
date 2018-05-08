@@ -15,6 +15,9 @@ Router.map(function() {
   this.route('register');
   this.route('about');
   this.route('contact');
+  this.route('tournamentpage',function(){
+    this.route('tournamentpage',{path: '/:tournament_id'});
+  });
 });
 
 export default Router;
