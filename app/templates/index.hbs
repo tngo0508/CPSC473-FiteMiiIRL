@@ -1,1 +1,14 @@
-{{outlet}}
+<div class="jumbo">
+  <div class="right wel"></div>
+  <h1>Simplify Tournament Management</h1>
+  <p>
+    <h3>Join us now and create your own tournament!</h3>
+  </p>
+  {{#link-to "login" class="button" }}
+    Create Tournament
+  {{/link-to}}
+</div>
+
+{{#each model as |tournamentUnit|}}
+  {{tournament-list tournaments=tournamentUnit}}
+{{/each}}
