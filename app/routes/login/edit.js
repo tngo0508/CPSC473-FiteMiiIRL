@@ -20,7 +20,10 @@ export default Route.extend({
   actions: {
 
     saveTournament(tournament) {
-      tournament.save().then(() => this.transitionTo('login'));
+      // tournament.save().then(() => this.transitionTo('login'));
+      tournament.save().then(() => {
+        this.transitionTo('login').then(() =>         window.location.reload(true));
+      })
     },
 
     willTransition(transition) {
