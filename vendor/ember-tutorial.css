@@ -348,44 +348,46 @@ p {
 }
 
 .container-image {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.container-image {
+  width: 25%;
+  height: 100%;
 }
 
 .container-event {
-  width: 60%;
+  width: 50%;
+  height: 100%;
 }
 
-.container-map {
+.detail-map {
   width: 20%;
+  height: 100%
 }
 
 .detail-event {
   display: flex;
-  flex-flow: column wrap;
-  height: 50%;
-}
-
-.detail-owner {
-  width: 50%;
-  height: 50%;
-}
-
-.detail-category {
-  width: 50%;
-  height: 50%;
-}
-
-.detail-city {
-  width: 50%;
-  height: 50%;
-}
-
-.detail-count {
-  width: 50%;
-  height: 50%;
-}
-
-.map {
-  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
   height: 100%;
+}
+
+.details-group1 {
+  width: 60%;
+  height: 50%;
+  margin-bottom: 1%;
+}
+
+.details-group2 {
+  width: 40%;
+  height: 50%;
+  margin-bottom: 1%;
+}
+
+.details-button {
+  margin-top: 5%;
 }
