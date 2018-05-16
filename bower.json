@@ -1,0 +1,6 @@
+{
+  "name": "cpsc473-fite-mii-irl",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}
