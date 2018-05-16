@@ -7,11 +7,17 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('tournaments');
+  this.route('tournaments', function(){
+  });
+
+
+
   this.route('login', function() {
+
     this.route('new');
     this.route('edit', { path: '/:tournament_id/edit' });
   });
+
   this.route('register');
   this.route('about');
   this.route('contact');
