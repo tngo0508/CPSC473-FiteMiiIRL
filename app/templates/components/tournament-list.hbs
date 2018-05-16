@@ -1,44 +1,44 @@
 <div class="event-listing">
   <article class="listing">
-    <div class="detail-image">
-      <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <div class="container-image">
+      <div class="detail-image">
+        <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
       <img src="{{tournaments.image}}" alt="">
       <small>View Larger</small>
       </a>
-    </div>
-    <div class="detail-link">
-      {{#link-to 'tournamentpage.tournamentpage' tournaments.id}}Tourney Page{{/link-to}}
-    </div>
-    <div class="detail-title">
-      <h3>{{tournaments.title}}</h3>
-    </div>
-    <div class="detail-event">
-      <div class="detail-owner">
-        <p>Event Organizer: {{tournaments.organizer}}</p>
       </div>
-      <div class="detail-category">
-        <span>Type:</span> {{tournaments.category}}
-      </div>
-      <div class="detail-city">
-        <span>Location:</span> {{tournaments.city}}
-      </div>
-      <div class="detail-count">
-        <span>Number of attendee:</span> {{tournaments.attendee}}
+      <div class="detail-link">
+        {{#link-to 'tournamentpage.tournamentpage' tournaments.id}}Tourney Page{{/link-to}}
       </div>
     </div>
-
-    <div class="detail-address">
-      <p>Current Attendees:
+    <div class="container-event">
+      <div class="detail-title">
+        <h3>{{tournaments.title}}</h3>
+      </div>
+      <div class="detail-event">
+        <div class="detail-owner">
+          <span>Event Organizer: {{tournaments.organizer}}</span>
+        </div>
+        <div class="detail-category">
+          <span>Type: {{tournaments.category}}</span>
+        </div>
+        <div class="detail-city">
+          <span>Location: {{tournaments.city}}</span>
+        </div>
+        <div class="detail-count">
+          <span>Number of attendee: {{tournaments.attendee}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="container-map">
+      {{location-map location=tournaments.city}}
+    </div>
+    <!-- <div class="detail-address">
+      <span>Current Attendees:
         {{#each-in tournaments.people as |attendslot name|}}
           {{name}}
         {{/each-in}}
-      </p>
-    </div>
-
-
-    <div class="detail-map">
-    {{location-map location=tournaments.city}}
-  </div>
-
+      </span>
+    </div> -->
   </article>
 </div>

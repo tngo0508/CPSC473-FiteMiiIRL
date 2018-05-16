@@ -22,5 +22,4 @@ testem.log
 bower.json.ember-try
 package.json.ember-try
 app/.DS_Store
-app/index.html
-app/index.html
+maps_api_key.txt
