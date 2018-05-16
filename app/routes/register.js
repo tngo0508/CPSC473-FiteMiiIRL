@@ -24,18 +24,17 @@ export default Route.extend({
 
       auth.createUserWithEmailAndPassword(email, password).then((userResponse) => {
         this.controller.set('responseMessage', `You have succesfully created a new account with the following uid:` + userResponse.uid + `. Your account is signed in automatically. Please click on My Tournament for the next step`);
-        this.controller.set('responseError', '')
-        this.controller.set('emailAddress', '')
-        this.controller.set('password', '')
-        this.controller.set('confirmedPassword', '')
-        this.controller.set('registerInProgress', false)
-        this.controller.set('isDisabled', false)
-        // this.transitionTo('login');
-      }, (error) => {
-        if (error) {
-          this.controller.set('responseError', error);
-          this.controller.set('responseMessage', '');
-        }
+        this.controller.set('responseError', '');
+        this.controller.set('emailAddress', '');
+        this.controller.set('password', '');
+        this.controller.set('confirmedPassword', '');
+        this.controller.set('registerInProgress', false);
+        this.controller.set('isDisabled', false);
+      }).catch((error) => {
+        this.controller.set('responseError', error);
+        this.controller.set('responseMessage', '');
+        this.controller.set('registerInProgress', false);
+        this.controller.set('isDisabled', false);
       });
     }
   }
