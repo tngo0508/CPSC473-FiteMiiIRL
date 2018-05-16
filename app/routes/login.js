@@ -24,7 +24,7 @@ export default Route.extend({
         }).catch((error) => {
           this.controller.set('responseError', error.message);
         }).then(() => {
-          this.controller.set('responseError', '');
+          // this.controller.set('responseError', '');
           this.controller.set('emailAddress', '');
           this.controller.set('password', '');
           this.controller.set('loginInProgress', false);
