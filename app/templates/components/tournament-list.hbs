@@ -1,32 +1,42 @@
-<article class="listing">
-  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
-    <img src="{{tournaments.image}}" alt="">
-    <small>View Larger</small>
-  </a>
-  <h3>{{tournaments.title}}</h3>
-  <div class="detail owner">
-    <span>Event Organizer:</span> {{tournaments.organizer}}
-  </div>
-  <div class="detail type">
-    <span>Type:</span> {{tournaments.category}}
-  </div>
-  <div class="detail location">
-    <span>Location:</span> {{tournaments.city}}
-  </div>
-  <div class="detail bedrooms">
-    <span>Number of attendee:</span> {{tournaments.attendee}}
-  </div>
-
-<div class="detail attendees">
-  <span>Current Attendees:  </span> {{#each-in tournaments.people as |attendslot name|}}
-    {{name}}
-  {{/each-in}}
-</div>
-
-
-  <div class="detail bedrooms">
+<div class="event-listing">
+  <article class="listing">
+    <div class="detail-image">
+      <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+      <img src="{{tournaments.image}}" alt="">
+      <small>View Larger</small>
+      </a>
+    </div>
+    <div class="detail-link">
       {{#link-to 'tournamentpage.tournamentpage' tournaments.id}}Tourney Page{{/link-to}}
-  </div>
-  {{location-map location=tournaments.city}}
+    </div>
+    <div class="detail-title">
+      <h3>{{tournaments.title}}</h3>
+    </div>
+    <div class="detail-event">
+      <div class="detail-owner">
+        <p>Event Organizer: {{tournaments.organizer}}</p>
+      </div>
+      <div class="detail-category">
+        <span>Type:</span> {{tournaments.category}}
+      </div>
+      <div class="detail-city">
+        <span>Location:</span> {{tournaments.city}}
+      </div>
+      <div class="detail-count">
+        <span>Number of attendee:</span> {{tournaments.attendee}}
+      </div>
+    </div>
 
-</article>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" {{action 'buttonClickedv2' tournaments}}>{{buttonLabeled}}</button>
+      </div>
+    </div>
+
+
+    <div class="detail-map">
+    {{location-map location=tournaments.city}}
+  </div>
+
+  </article>
+</div>
