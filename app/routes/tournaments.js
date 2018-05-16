@@ -23,7 +23,8 @@ export default Route.extend({
         Tournament.get('people').pushObject(newCompetitor);
         Tournament.save();
 
-    },
+    }
+  },
 
     deleteAttender(Tournament){ //attempt to remove user from the attendee list
 
