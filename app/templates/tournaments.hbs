@@ -10,5 +10,5 @@
 </div>
 
 {{#each model as |tournamentUnit|}}
-  {{tournament-list tournaments=tournamentUnit}}
+  {{tournament-list tournaments=tournamentUnit buttonlabel=buttonLabeled action='saveAttender'}}
 {{/each}}
