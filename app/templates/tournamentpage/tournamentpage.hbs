@@ -19,6 +19,14 @@
   <div>
     <p>Venue Location: {{model.city}}</p>
   </div>
+  <div>
+    <p>Attendee List:</p>
+    <ol>
+    {{#each model.people as |competitor|}}
+      <li>{{competitor.email}} </li>
+    {{/each}}
+  </ol>
+  </div>
 </div>
 </div>
 <div class = "container">

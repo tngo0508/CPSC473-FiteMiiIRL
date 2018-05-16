@@ -17,6 +17,33 @@ export default Route.extend({
 
         Tournament.get('people').pushObject(newCompetitor);
         Tournament.save();
+
+    },
+
+    deleteAttender(Tournament){ //attempt to remove user from the attendee list
+
+      let confirmation = confirm("Are you sure you want to not attend?")
+
+      if(confirmation){
+
+        let email = '';
+        if(this.get('session').get('currentUser')){
+          email = this.get('session').get('currentUser').email;
+        }
+
+
+        console.log(Tournament.get('people'));
+        // .findRecord('email', email).then(() =>{
+        //   email.deleteRecord();
+        // });
+      }
+
+
+
+
+
+
+
     }
 
 
