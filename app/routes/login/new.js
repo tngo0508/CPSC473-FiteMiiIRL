@@ -24,8 +24,18 @@ export default Route.extend({
 
   actions: {
 
+
     saveTournament(newTournament) {
       // newTournament.save().then(() => this.transitionTo('login'));
+
+      var newCompetitor = this.store.createRecord('competitor',{
+        body: 'Daigo The Beast'
+      });
+
+      //var Tournament = this.get('Tournament');
+
+      newTournament.get('people').pushObject(newCompetitor);
+
       newTournament.save().then(() => {
         this.transitionTo('login').then(() =>         window.location.reload(true));
       })
