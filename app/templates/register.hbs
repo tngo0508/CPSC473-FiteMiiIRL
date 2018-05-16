@@ -10,11 +10,17 @@
   <div class="form-horizontal form-group form-group-lg row">
     <div class="col-xs-10 col-xs-offset-1">
       <label for="inputPassword" class="col-form-label">Password</label> {{input type="password" value=password class="form-control" placeholder="at least 6 characters"}}
+      {{#unless isMatch}}
+        <label class="label label-danger">Passwords must match</label>
+      {{/unless}}
     </div>
   </div>
   <div class="form-horizontal form-group form-group-lg row">
     <div class="col-xs-10 col-xs-offset-1">
       <label for="confirmedPassword" class="col-form-label">Confirmed Password</label> {{input type="password" value=confirmedPassword class="form-control" placeholder="at least 6 characters"}}
+      {{#unless isMatch}}
+        <label class="label label-danger">Passwords must match</label>
+      {{/unless}}
     </div>
   </div>
   <div class="form-horizontal form-group form-group-lg row">
