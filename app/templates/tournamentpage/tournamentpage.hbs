@@ -4,21 +4,26 @@
     <img class = "right" src = {{model.image}}/>
   </div>
   <div class = "tourneydetails">
-    <p>{{model.attendee}}</p>
+  <div>
+    <h3>Headline Game: {{model.category}}</h3>
   </div>
   <div>
-    <h2>{{model.category}}</h2>
+    <p>Event Description: {{model.description}}</p>
   </div>
   <div>
-    <h2>{{model.city}}</h2>
+    <p>Contact Organizer: <a href = "mailto: {{model.organizer}}">{{model.organizer}}</a></p>
   </div>
   <div>
-    <p>{{model.description}}</p>
+    <p> Number of Attendees: {{model.attendee}}</p>
   </div>
   <div>
-    <p>Contact Organizer: {{model.organizer}}</p>
+    <p>Venue Location: {{model.city}}</p>
   </div>
+</div>
 
-
-
+</div>
+<div class = "container">
+<article class = "listing map page">
+    {{location-map location=model.city}}
+</article>
 </div>

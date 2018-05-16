@@ -1,5 +1,19 @@
 @import "bootstrap";
 
+.title{
+
+}
+
+.listing .map .page {
+  position: absolute;
+
+
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  border-radius: 5px;
+}
+
 body{
   padding-top: 20px;
   background-image: url(../assets/images/back.jpg);
@@ -82,4 +96,14 @@ html {
     color: #333333;
     background-color: #eeeeee;
   }
+}
+
+.mapslisting{
+  position: absolute;
+  bottom: 13px;
+  right: 50px;
+  height: 120px;
+  width: 120px;
+  background-size: cover;
+  border-radius: 5px;
 }
