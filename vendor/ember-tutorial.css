@@ -389,3 +389,7 @@ p {
   width: 100%;
   height: 100%;
 }
+
+.sign-out {
+  text-align: center;
+}
