@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 # cpsc473-fite-mii-irl
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This EmberJS website has the purpose of being a tournament organizer, where users are able to create their own tournaments and attend the tournaments other users create. 
+
+This website also utilizes the Google Maps API to show the locations of the tournaments created.
 
 ## Prerequisites
 
@@ -15,46 +15,13 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/keybladesonic/CPSC473-FiteMiiIRL.git
 * `cd cpsc473-fite-mii-irl`
 * `npm install`
 
 ## Running / Development
+In order to start with the Google Maps API Key working, please use the following command:
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* `GOOGLE_MAPS_API_KEY = {YOUR API KEY HERE} ember server`
+* Visit the site at [http://localhost:4200]
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-=======
-# CPSC473-FiteMiiIRL
->>>>>>> 55bf9fcc03722db5fdb8393cac9670b28329fb62
