@@ -10,7 +10,7 @@ export default DS.Model.extend({
   attendee: DS.attr('number'),
   description: DS.attr('string'),
   people: DS.hasMany('competitor',{async: false}),
-  metaData: DS.belongsTo('tournament', { async: false }),
+  // metaData: DS.belongsTo('tournament', { async: false }),
   //people: DS.hasMany('attender'),
   //could also be a way at doing it
 
