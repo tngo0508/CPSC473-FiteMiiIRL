@@ -393,3 +393,14 @@ p {
 .sign-out {
   text-align: center;
 }
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.logo-container {
+  width: 100%;
+  height: auto;
+  margin-right: -200px;
+}
