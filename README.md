@@ -1,4 +1,4 @@
-# cpsc473-fite-mii-irl
+#FiteMiiIrl
 
 This EmberJS website has the purpose of being a tournament organizer, where users are able to create their own tournaments and attend the tournaments other users create. 
 
