@@ -25,8 +25,8 @@ export default Route.extend({
           this.controller.set('responseError', error.message);
         }).then(() => {
           // this.controller.set('responseError', '');
-          this.controller.set('emailAddress', '');
-          this.controller.set('password', '');
+          // this.controller.set('emailAddress', '');
+          // this.controller.set('password', '');
           this.controller.set('loginInProgress', false);
           this.controller.set('isDisabled', false);
           this.refresh()
