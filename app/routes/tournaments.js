@@ -22,7 +22,7 @@ export default Route.extend({
       }
 
       if (email == '') {
-        //alert("Please sign in!");
+        alert("Please sign in!");
       } else {
 
         let attending = 0;
