@@ -13,27 +13,43 @@ export default Route.extend({
       }
 
       if (email == '') {
-        alert("Please sign in!");
+        //alert("Please sign in!");
       } else {
 
-        alert("Thank you for signing up!");
-        var newCompetitor = this.store.createRecord('competitor', {
-          body: email
-        });
-        Tournament.get('people').pushObject(newCompetitor);
-        Tournament.save();
+        let attending = 0;
 
-    }
-  },
+        let test = Tournament.hasMany('people');
 
-    deleteAttender(Tournament){ //attempt to remove user from the attendee list
+        for (var i = 0; i < test.hasManyRelationship.canonicalMembers.list.length; i++) {
+          if (test.hasManyRelationship.canonicalMembers.list[i].__data.body == email) {
+            alert("Already Attending");
+
+
+            attending = 1;
+          }
+        }
+
+        if (attending == 0) {
+          alert("Thank you for signing up!");
+          var newCompetitor = this.store.createRecord('competitor', {
+            body: email
+          });
+          Tournament.get('people').pushObject(newCompetitor);
+          Tournament.save();
+        }
+
+
+      }
+    },
+
+    deleteAttender(Tournament) { //attempt to remove user from the attendee list
 
       let confirmation = confirm("Are you sure you want to not attend?")
 
-      if(confirmation){
+      if (confirmation) {
 
         let email = '';
-        if(this.get('session').get('currentUser')){
+        if (this.get('session').get('currentUser')) {
           email = this.get('session').get('currentUser').email;
         }
 
