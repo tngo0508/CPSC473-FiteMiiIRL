@@ -17,12 +17,19 @@ module.exports = function(environment) {
       }
     },
     firebase: {
-      apiKey: "AIzaSyBxIEMt6IlyGgqU8Zi6CSkbXXktsQLu-zU",
-      authDomain: "fitemiiirl-33e1e.firebaseapp.com",
-      databaseURL: "https://fitemiiirl-33e1e.firebaseio.com",
-      projectId: "fitemiiirl-33e1e",
-      storageBucket: "fitemiiirl-33e1e.appspot.com",
-      messagingSenderId: "562478239860"
+      // apiKey: "AIzaSyBxIEMt6IlyGgqU8Zi6CSkbXXktsQLu-zU",
+      // authDomain: "fitemiiirl-33e1e.firebaseapp.com",
+      // databaseURL: "https://fitemiiirl-33e1e.firebaseio.com",
+      // projectId: "fitemiiirl-33e1e",
+      // storageBucket: "fitemiiirl-33e1e.appspot.com",
+      // messagingSenderId: "562478239860"
+
+      apiKey: "AIzaSyB0a4cVSJRkb85JuM36TX8fva9wDKOfhKM",
+      authDomain: "fitemiiirl-20f2f.firebaseapp.com",
+      databaseURL: "https://fitemiiirl-20f2f.firebaseio.com",
+      projectId: "fitemiiirl-20f2f",
+      storageBucket: "fitemiiirl-20f2f.appspot.com",
+      messagingSenderId: "449569452247"
     },
 
 
